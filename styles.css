@@ -1,0 +1,558 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F0F0; /* Light Gray */
+    scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #2D3142; /* Dark Slate Gray */
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero Section Styles */
+header {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Hero Section Enhancements */
+.carousel-content {
+   
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Align text to the left */
+}
+
+.carousel-content h1 {
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.carousel-content p {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Welcome Section Enhancements */
+.welcome-box {
+    background-color: #ffffff; /* White background for the welcome box */
+    color: #333333; /* Dark text for contrast */
+    padding: 40px; /* More padding for a spacious look */
+    margin-top: -100px; /* Pull the welcome box upwards into the bottom part of the hero section */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for depth */
+    max-width: 900px; /* Max width for better control */
+    margin-left: auto; /* Center the box */
+    margin-right: auto;
+    position: relative; /* Ensure the box is properly positioned */
+    z-index: 2; /* Bring the box above other content */
+}
+
+.welcome-box h2 {
+    font-size: 2.8rem; /* Larger size for the welcome title */
+    margin-bottom: 20px; /* Space between the title and content */
+}
+
+.welcome-box p {
+    font-size: 1.2rem; /* Comfortable reading size for paragraph */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+/* Carousel Styles */
+.carousel-inner img {
+    width: auto;
+    max-height: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.carousel-image {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.carousel-item {
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Navigation and Text Color Overrides */
+nav.navbar,
+nav.navbar a,
+header h1, header p, header a {
+    background-color: white !important;
+    color: black !important;
+}
+.card {
+    height: 100%;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer; /* Add cursor pointer for better interaction */
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the background color for the hover effect */
+    transform: translateY(-3px); /* Adjust the transform for a subtle hover effect */
+}
+
+.card-header {
+    background-color: transparent;
+    color: black; /* Change the text color to black */
+    border-bottom: none; /* Remove the bottom border */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    background-color: transparent !important; /* Set the background color to transparent */
+}
+
+.card-body {
+    padding-bottom: 20px;
+    background-color: transparent !important; /* Set the background color to transparent */
+}
+
+
+.card-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* About Us Section */
+#about-us .about-us-text {
+    font-size: 1.2rem;
+    color: black;
+}
+
+#about-us .about-us-text span {
+    font-size: 1.5rem;
+    color: purple;
+    font-weight: bold;
+}
+
+/* Why Choose Us Section */
+#why-choose-us {
+    background-color: #9803fc;
+    color: white;
+    padding: 50px 0;
+}
+
+.why-choose-us-section {
+    text-align: center;
+}
+
+.why-choose-us-item {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.why-choose-us-item .card-body {
+    padding: 20px;
+    height: 100%; /* Add this line to ensure the content takes full height */
+}
+
+
+.why-choose-us-item h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.why-choose-us-item p {
+    font-size: 1.2rem;
+}
+/* Add move-up animation to cards in Why Choose Us section */
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.why-choose-us-item.fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Why Choose Us Section */
+.why-choose-us-item {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+    opacity: 0; /* Start with 0 opacity for the fade-in effect */
+    transform: translateY(20px); /* Start with a slight translation for the move-up effect */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.why-choose-us-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Key Metrics Section */
+.key-metrics-section {
+    background-color: #452a6a;
+    color: white;
+    padding: 50px 0;
+    background-image: url('path_to_your_background_image');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section-heading {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.key-metrics-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.metric {
+    margin: 0 20px;
+}
+
+.count {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.metric-title {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.client-reviews-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* White Background Section */
+.white-bg-section {
+    background-color: white;
+    height: 50px;
+}
+.footer {
+    background-color: #6f42c1; /* Adjust the color to match your original footer background */
+    padding: 20px 0;
+    font-family: Arial, sans-serif; /* Adjust according to your font preference */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-logo {
+    width: 100px; /* Adjust based on your logo's size */
+    margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Tablet and Small Screens (up to 768px) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header {
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .carousel-content {
+        font-size: smaller;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-img-top {
+        height: auto;
+    }
+
+    #contact {
+        text-align: center;
+    }
+}
+
+/* Very Small Mobile Screens (e.g., 320px) */
+@media (max-width: 320px) {
+    header .carousel-content {
+        font-size: even smaller;
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+/* Animation for Cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Larger Screens (lg) - Adjust Card Width */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+/* Additional Media Queries for Extra Responsiveness */
+
+/* Reviews Section */
+.client-reviews-section {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.reviews-heading {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+}
+
+.review {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.review-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #0000ff;
+}
+
+.review-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.review-navigation {
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #666;
+}
+/* Base styles for larger screens */
+.key-metrics-section .metric {
+    /* Adjust these as needed for your larger screen layout */
+    margin-bottom: 30px; /* Add some space between the metrics */
+}
+
+/* Styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .key-metrics-section .metric {
+        flex: 0 0 50%; /* Each metric takes up half the width */
+        max-width: 50%; /* Ensures the width does not exceed 50% */
+        margin-bottom: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .key-metrics-list {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap as needed */
+    }
+
+    .key-metrics-section h2.section-heading {
+        font-size: 22px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Styles for screens smaller than 320px */
+@media only screen and (max-width: 320px) {
+    .key-metrics-section .metric {
+        flex: 0 0 50%; /* Keep each metric half width for 2/2 layout */
+        max-width: 50%; /* Ensure this doesn’t exceed 50% of parent */
+        text-align: center; /* Center the content for better readability */
+    }
+
+    .key-metrics-section .metric-title {
+        font-size: 14px; /* Adjust metric titles for smaller screens */
+    }
+
+    .key-metrics-section .count {
+        font-size: 26px; /* Adjust the font size for the counts */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .client-reviews-section .review {
+        flex: 0 0 100%; /* Make review take full width on smaller screens */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+        margin-bottom: 20px; /* Provide sufficient space between reviews */
+    }
+
+    .client-reviews-section .reviews-heading {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+        margin-bottom: 20px; /* Provide more space below the heading */
+    }
+
+    .client-reviews-section .review-text {
+        font-size: 14px; /* Adjust review text size for readability */
+    }
+
+    .client-reviews-section .review-author {
+        font-size: 13px; /* Adjust author name size for smaller screens */
+    }
+
+    .client-reviews-section .review-line {
+        margin-bottom: 10px; /* Adjust spacing for visual separation */
+    }
+
+    .client-reviews-section .review-navigation .dot {
+        margin: 0 5px; /* Reduce space between navigation dots */
+    }
+}
+
+/* This CSS goes inside your <style> tag or external stylesheet */
+
+/* Styles for desktop and larger tablets: 2 reviews per slide */
+.review {
+    width: 50%; /* Each review takes up half the width of the slide */
+    box-sizing: border-box; /* Include padding and borders in the element's total width */
+}
+
+/* Styles for mobile: 1 review per slide */
+@media only screen and (max-width: 768px) {
+    .review {
+        width: 100%; /* Each review takes up the full width of the slide */
+        margin-bottom: 20px; /* Add some space between reviews when they stack */
+    }
+
+    .d-flex.flex-wrap .review {
+        flex: 0 0 100%; /* Flex basis to 100% for mobile, forcing break to new line */
+    }
+}
